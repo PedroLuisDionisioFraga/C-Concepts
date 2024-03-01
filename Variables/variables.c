@@ -98,7 +98,7 @@
 
 //* To `external` example
 #include "external_variables.c"
-#include "c_to_cpp.cpp"
+#include "Wrapper/c_to_cpp.h"
 
 #define SPACER printf("\n------------------\n\n");
 
@@ -114,6 +114,7 @@ void foo()
   printf("a = %d, sa = %d\n", a, sa);
 }
 
+//! To run this main you need to use the script `run_code.bat` in the terminal
 int main()
 {
   int age = 30;
@@ -196,7 +197,10 @@ int main()
   // The extern keyword is used to declare a global variable that will be used in other files.
   printf("The value of `mother_name` is %s\n", mother_name);
   say_hello_to_mom();
-  user_say_hello_to_dad();
+  
+  Person *person = new_person("Fraga");
+  printf("Hello Dad, %s!\r\n", Person_get_father(person));
+  delete_Person(person);
 
   return 0;
 }

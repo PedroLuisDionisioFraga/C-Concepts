@@ -1,11 +1,15 @@
-#ifndef USER_HPP
-#define USER_HPP
+#ifndef PERSON_HPP
+#define PERSON_HPP
 
-class User
+class Person
 {
 public:
-  User();
-  void say_hello_to_dad();
+  Person(char father[50]);
+
+  char* get_father();
+
+private:
+  char* father;
 };
 
 #endif

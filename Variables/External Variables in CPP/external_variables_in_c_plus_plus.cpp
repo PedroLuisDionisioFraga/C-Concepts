@@ -1,12 +1,11 @@
-#include <iostream>
-
 #include "external_variables_in_c_plus_plus.hpp"
 
-User::User()
+Person::Person(char father[50])
 {
+  this->father = father;
 }
 
-void User::say_hello_to_dad()
+char* Person::get_father()
 {
-  std::cout << "Hello, " << "Dad" << "!\n";
+  return this->father;
 }
