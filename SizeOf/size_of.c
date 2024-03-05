@@ -1,5 +1,16 @@
 /**
- * The `sizeof` operator is used to calculate the size of a variable or data type.
+ * The `sizeof` function returns the size of the variable or type in bytes, and this size is of type `size_t`
+ * 
+ * The %zu format specifier is used in the printf function to print values of type size_t.
+ * 
+ * - % is the format specifier introduction.
+ * - z is a length modifier that specifies that the argument is of type size_t.
+ * - u specifies that the argument should be formatted as an unsigned decimal integer.
+ * 
+ * All data types in C have a size, which is the number of bytes they occupy in memory.
+ * The compiler reserves a specific amount of memory for that variable based on its data type, most of them was declared below.
+ * 
+ * 
  */
 #include <stdio.h>
 #include <stdint.h>
@@ -7,53 +18,53 @@
 
 int main()
 {
-  printf("Size of char: %lu bytes\n", sizeof(char));
-  printf("Size of short: %lu bytes\n", sizeof(short));
-  printf("Size of int: %lu bytes\n", sizeof(int));
-  printf("Size of long: %lu bytes\n", sizeof(long));
-  printf("Size of long long: %lu bytes\n", sizeof(long long));
-  printf("Size of float: %lu bytes\n", sizeof(float));
-  printf("Size of double: %lu bytes\n", sizeof(double));
-  printf("Size of long double: %lu bytes\n", sizeof(long double));
-  printf("Size of bool: %lu bytes\n", sizeof(bool));
+  printf("Size of char: %zu bytes\n", sizeof(char));
+  printf("Size of short: %zu bytes\n", sizeof(short));
+  printf("Size of int: %zu bytes\n", sizeof(int));
+  printf("Size of long: %zu bytes\n", sizeof(long));
+  printf("Size of long long: %zu bytes\n", sizeof(long long));
+  printf("Size of float: %zu bytes\n", sizeof(float));
+  printf("Size of double: %zu bytes\n", sizeof(double));
+  printf("Size of long double: %zu bytes\n", sizeof(long double));
+  printf("Size of bool: %zu bytes\n", sizeof(bool));
   printf("-----------------------------\n");
-  printf("Size of void: %lu bytes\n", sizeof(void));
+  printf("Size of void: %zu bytes\n", sizeof(void));
   printf("-----------------------------\n");
-  printf("Size of int8_t: %lu bytes\n", sizeof(int8_t));
-  printf("Size of int16_t: %lu bytes\n", sizeof(int16_t));
-  printf("Size of int32_t: %lu bytes\n", sizeof(int32_t));
-  printf("Size of int64_t: %lu bytes\n", sizeof(int64_t));
+  printf("Size of int8_t: %zu bytes\n", sizeof(int8_t));
+  printf("Size of int16_t: %zu bytes\n", sizeof(int16_t));
+  printf("Size of int32_t: %zu bytes\n", sizeof(int32_t));
+  printf("Size of int64_t: %zu bytes\n", sizeof(int64_t));
   printf("-----------------------------\n");
-  printf("Size of uint8_t: %lu bytes\n", sizeof(uint8_t));
-  printf("Size of uint16_t: %lu bytes\n", sizeof(uint16_t));
-  printf("Size of uint32_t: %lu bytes\n", sizeof(uint32_t));
-  printf("Size of uint64_t: %lu bytes\n", sizeof(uint64_t));
+  printf("Size of uint8_t: %zu bytes\n", sizeof(uint8_t));
+  printf("Size of uint16_t: %zu bytes\n", sizeof(uint16_t));
+  printf("Size of uint32_t: %zu bytes\n", sizeof(uint32_t));
+  printf("Size of uint64_t: %zu bytes\n", sizeof(uint64_t));
   printf("-----------------------------\n");
-  printf("Size of intptr_t: %lu bytes\n", sizeof(intptr_t));
-  printf("Size of uintptr_t: %lu bytes\n", sizeof(uintptr_t));
+  printf("Size of intptr_t: %zu bytes\n", sizeof(intptr_t));
+  printf("Size of uintptr_t: %zu bytes\n", sizeof(uintptr_t));
   printf("-----------------------------\n");
-  printf("Size of char*: %lu bytes\n", sizeof(char*));
-  printf("Size of short*: %lu bytes\n", sizeof(short*));
-  printf("Size of int*: %lu bytes\n", sizeof(int*));
-  printf("Size of long*: %lu bytes\n", sizeof(long*));
-  printf("Size of long long*: %lu bytes\n", sizeof(long long*));
-  printf("Size of float*: %lu bytes\n", sizeof(float*));
-  printf("Size of double*: %lu bytes\n", sizeof(double*));
-  printf("Size of long double*: %lu bytes\n", sizeof(long double*));
-  printf("Size of void*: %lu bytes\n", sizeof(void*));
+  printf("Size of char*: %zu bytes\n", sizeof(char*));
+  printf("Size of short*: %zu bytes\n", sizeof(short*));
+  printf("Size of int*: %zu bytes\n", sizeof(int*));
+  printf("Size of long*: %zu bytes\n", sizeof(long*));
+  printf("Size of long long*: %zu bytes\n", sizeof(long long*));
+  printf("Size of float*: %zu bytes\n", sizeof(float*));
+  printf("Size of double*: %zu bytes\n", sizeof(double*));
+  printf("Size of long double*: %zu bytes\n", sizeof(long double*));
+  printf("Size of void*: %zu bytes\n", sizeof(void*));
   printf("-----------------------------\n");
-  printf("Size of int8_t*: %lu bytes\n", sizeof(int8_t*));
-  printf("Size of int16_t*: %lu bytes\n", sizeof(int16_t*));
-  printf("Size of int32_t*: %lu bytes\n", sizeof(int32_t*));
-  printf("Size of int64_t*: %lu bytes\n", sizeof(int64_t*));
+  printf("Size of int8_t*: %zu bytes\n", sizeof(int8_t*));
+  printf("Size of int16_t*: %zu bytes\n", sizeof(int16_t*));
+  printf("Size of int32_t*: %zu bytes\n", sizeof(int32_t*));
+  printf("Size of int64_t*: %zu bytes\n", sizeof(int64_t*));
   printf("-----------------------------\n");
-  printf("Size of uint8_t*: %lu bytes\n", sizeof(uint8_t*));
-  printf("Size of uint16_t*: %lu bytes\n", sizeof(uint16_t*));
-  printf("Size of uint32_t*: %lu bytes\n", sizeof(uint32_t*));
-  printf("Size of uint64_t*: %lu bytes\n", sizeof(uint64_t*));
+  printf("Size of uint8_t*: %zu bytes\n", sizeof(uint8_t*));
+  printf("Size of uint16_t*: %zu bytes\n", sizeof(uint16_t*));
+  printf("Size of uint32_t*: %zu bytes\n", sizeof(uint32_t*));
+  printf("Size of uint64_t*: %zu bytes\n", sizeof(uint64_t*));
   printf("-----------------------------\n");
-  printf("Size of intptr_t*: %lu bytes\n", sizeof(intptr_t*));
-  printf("Size of uintptr_t*: %lu bytes\n", sizeof(uintptr_t*));
+  printf("Size of intptr_t*: %zu bytes\n", sizeof(intptr_t*));
+  printf("Size of uintptr_t*: %zu bytes\n", sizeof(uintptr_t*));
 
 
   return 0;
