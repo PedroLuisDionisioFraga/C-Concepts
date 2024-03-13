@@ -19,4 +19,10 @@ typedef struct
   uint8_t brain_eaten;
 } Zombie;
 
+/**
+ * The _t suffix in `Zombie_t` is a naming convention used in C and C++ to indicate that a type is a typedef.
+ * This convention is particularly common in C, where typedefs are often used to create shorter or more meaningful names for complex or frequently-used types. However, it's not enforced by the language itself and is not universally followed by all C programmers.
+ */
+typedef Zombie Zombie_t;
+
 void display_zombie_data(Zombie z);
