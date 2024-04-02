@@ -3,6 +3,18 @@
  * @date 2024-03-26
  * @brief The volatile keyword in C and C++ is used to indicate that a variable's value may change unexpectedly, such as by hardware or concurrently executing code.
  * In resume, `volatile` tells the compiler not to optimize anything that has to do with the volatile variable, for example cache accesses.
+ * 
+ * 
+ * Another use for volatile is signal handlers. If you have code like this:
+ * ```c
+ *  int quit = 0;
+ *  while (!quit)
+ *  {
+ *    very small loop which is completely visible to the compiler
+ *  }
+ * ```
+ * The compiler is allowed to notice the loop body does not touch the quit variable and convert the loop to a while (true) loop. Even if the quit variable is set on the signal handler for SIGINT and SIGTERM; the compiler has no way to know that.
+ * However, if the quit variable is declared volatile, the compiler is forced to load it every time, because it can be modified elsewhere. This is exactly what you want in this situation.
  */
 
 #ifndef VOLATILE_H
