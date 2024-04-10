@@ -4,24 +4,29 @@ This repository contains various examples and exercises related to the C program
 
 ## Table of Contents
 
-- [Directory Structure](#directory-structure)
-- [Note](#note)
+- [Any Concepts about C and C++](#any-concepts-about-c-and-c)
+  - [Table of Contents](#table-of-contents)
+  - [Particular Comments](#particular-comments)
+    - [Memory Allocation](#memory-allocation)
+  - [Note](#note)
 
+## Particular Comments
 
-## Directory Structure
+### Memory Allocation
+ * Advantages of malloc() in C Programming 
+Dynamic memory allocation helps easily use large data where memory requirement arises at any time. 
+The malloc() facilitates resizing the memory at any time in the program. 
+The pointer ptr points to the first element, making it similar to an array. 
+ * Disadvantages of malloc() in C Programming 
+malloc() is not useful for embedded systems. 
+While using the malloc() function for dynamic memory allocation, you have to remember the defined size or memory space. 
+malloc() function could be more efficient. 
 
-- `Bit Fields/`: Contains examples of using bit fields in C.
-- `Carriage Return/`: Contains examples of using carriage return in C.
-- `Enumerators/`: Contains examples of using enumerators in C.
-- `Exercises/`: Contains various exercises written in C.
-- `Hello Word/`: Contains a basic "Hello, World!" program in C.
-- `Pointers/`: Contains examples of using pointers in C.
-- `Prototype Function/`: Contains examples of using prototype functions in C.
-- `SizeOf/`: Contains examples of using the `sizeof` operator in C.
-- `Structs/`: Contains examples of using structs in C.
-- `Tests/`: Contains test files.
-- `Union/`: Contains examples of using unions in C.
-- `Variables/`: Contains examples of using different types of variables in C. This includes examples of using external variables and wrapping C++ code in C.
+| **Memory Allocation Type** | **Allocation Time** | **Memory Location** | **Size Flexibility** | **Memory Size** | **Representation** |
+|:------------------------:|:-----------------:|:-----------------:|:------------------:|:-------------:|:----------------:|
+| **Static Memory Allocation** | Compile time | Stack | Fixed, pre-defined by the compiler | Fixed | Array |
+| **Dynamic Memory Allocation** | Run time | Heap | Can be changed as needed | Defined by user at run time | Pointer |
+
 
 
 ## Note
