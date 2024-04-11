@@ -1,21 +1,20 @@
 /**
  * The `sizeof` function returns the size of the variable or type in bytes, and this size is of type `size_t`
- * 
+ *
  * The %zu format specifier is used in the printf function to print values of type size_t.
- * 
+ *
  * - % is the format specifier introduction.
  * - z is a length modifier that specifies that the argument is of type size_t.
  * - u specifies that the argument should be formatted as an unsigned decimal integer.
- * 
+ *
  * All data types in C have a size, which is the number of bytes they occupy in memory.
  * The compiler reserves a specific amount of memory for that variable based on its data type, most of them was declared below.
- * 
- * 
+ *
+ *
  */
 #include <stdio.h>
 #include <stdint.h>
 #include <stdbool.h>
-
 int main()
 {
   printf("Size of char: %zu bytes\n", sizeof(char));
@@ -23,6 +22,7 @@ int main()
   printf("Size of int: %zu bytes\n", sizeof(int));
   printf("Size of long: %zu bytes\n", sizeof(long));
   printf("Size of long long: %zu bytes\n", sizeof(long long));
+  printf("Size of unsigned long long: %zu bytes\n", sizeof(unsigned long long));
   printf("Size of float: %zu bytes\n", sizeof(float));
   printf("Size of double: %zu bytes\n", sizeof(double));
   printf("Size of long double: %zu bytes\n", sizeof(long double));
