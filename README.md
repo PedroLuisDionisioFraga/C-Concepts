@@ -27,6 +27,7 @@ malloc() function could be more efficient.
 | **Static Memory Allocation** | Compile time | Stack | Fixed, pre-defined by the compiler | Fixed | Array |
 | **Dynamic Memory Allocation** | Run time | Heap | Can be changed as needed | Defined by user at run time | Pointer |
 
+References: [geeks for geeks](https://www.geeksforgeeks.org/dynamic-memory-allocation-in-c-using-malloc-calloc-free-and-realloc/)
 
 
 ## Note
