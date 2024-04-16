@@ -29,5 +29,9 @@ int main()
   Array<int> a = Array<int>(arr, 5);
   a.print();
 
+  char arr2[5] = {'a', 'b', 'c', 'd', 'e'};
+  Array<char> b = Array<char>(arr2, 5);
+  b.print();
+
   return 0;
 }
