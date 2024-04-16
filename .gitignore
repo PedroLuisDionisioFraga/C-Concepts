@@ -1,5 +1,8 @@
 # VS Code Folder
 .vscode/
 
+# IntelliJ Folder
+.idea/
+
 # Tests Folder
 Tests/
