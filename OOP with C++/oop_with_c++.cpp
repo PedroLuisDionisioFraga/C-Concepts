@@ -54,15 +54,22 @@ void Derived::bar(const string &str)
 
 int main()
 {
-  // Example of using 'virtual'
+  // Creating a new instance of Derived (new Derived()) and assigning it to a pointer of type Base (Base *)
+  // This means that the actual type of the object (in this case, Derived) is used to determine which destructor to call, not the type of the pointer (Base*). So when you delete ptr, the Derived destructor will be called first, followed by the Base destructor, ensuring that all resources are properly cleaned up.
   Base *ptr = new Derived();
+  printf("1 --------------------\r\n");
+
   ptr->foo(); // Calls Derived::foo() because of dynamic dispatch
+  printf("2 --------------------\r\n");
 
   // Example of using 'overload'
   Derived *derived = new Derived();
+  printf("3 --------------------\r\n");
+
   derived->bar(5); // Calls Derived::bar(int x)
   derived->bar("Hello"); // Calls Derived::bar(const string& str)
 
-  delete ptr, derived; // Don't forget to delete the pointer to prevent memory leak
+  printf("4 --------------------\r\n");
+  delete ptr; // Don't forget to delete the pointer to prevent memory leak
   return 0;
 }
