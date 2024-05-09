@@ -3,15 +3,15 @@
  * @date 2024-03-26
  * @brief This file contains the Base and Derived classes used to demonstrate the use of the 'virtual' keyword in C++.
  *
-** Public Inheritance (class Derived : public Base):
+ ** Public Inheritance (class Derived : public Base):
  *  Public members of the base class become public members of the derived class.
  *  Protected members of the base class become protected members of the derived class.
  *  Private members of the base class are not accessible directly from the derived class, but can be accessed through calls to the public and protected member functions of the base class.
-** Protected Inheritance (class Derived : protected Base):
+ ** Protected Inheritance (class Derived : protected Base):
  *  Public members of the base class become protected members of the derived class.
  *  Protected members of the base class become protected members of the derived class.
  *  Private members of the base class are not accessible directly from the derived class.
-** Private Inheritance (class Derived : private Base):
+ ** Private Inheritance (class Derived : private Base):
  *  Public members of the base class become private members of the derived class.
  *  Protected members of the base class become private members of the derived class.
  *  Private members of the base class are not accessible from the derived class.
@@ -57,16 +57,16 @@ public:
 class Derived : public Base
 {
 public:
-  public:
-    /**
-     * @brief Constructor for the Derived class.
-     */
-    Derived();
+public:
+  /**
+   * @brief Constructor for the Derived class.
+   */
+  Derived();
 
-    /**
-     * @brief Destructor for the Derived class.
-     */
-    ~Derived();
+  /**
+   * @brief Destructor for the Derived class.
+   */
+  ~Derived();
 
   /**
    * @brief Overrides the 'foo' function in the Base class.
@@ -84,7 +84,20 @@ public:
    * @note The 'const' keyword is used to indicate that the string parameter is constant and cannot be modified.
    * When you pass an argument by reference, the function can modify the argument. If you don't want the function to be able to modify the argument, you can add the const keyword to the argument declaration.
    */
-  void bar(const string& str);
+  void bar(const string &str);
+};
+
+/**
+ * @brief The FinalDerived class inherits from the Derived class and overrides the 'foo' function.
+ *
+ * @note The 'final' keyword is used to prevent the class from being inherited by other classes.
+ *  
+ */
+class FinalDerived final : public Derived
+{
+public:
+  void foo() override;
+  // Can't override bar because it's final in Derived
 };
 
 #endif // OOP_WITH_C_H

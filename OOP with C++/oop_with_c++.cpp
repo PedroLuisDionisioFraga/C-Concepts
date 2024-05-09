@@ -52,6 +52,11 @@ void Derived::bar(const string &str)
   cout << "Derived::foo(const string& str) called with str = " << str << "\r\n";
 }
 
+void FinalDerived::foo()
+{
+  std::cout << "FinalDerived::foo() called\n";
+}
+
 int main()
 {
   // Creating a new instance of Derived (new Derived()) and assigning it to a pointer of type Base (Base *)
@@ -66,10 +71,14 @@ int main()
   Derived *derived = new Derived();
   printf("3 --------------------\r\n");
 
-  derived->bar(5); // Calls Derived::bar(int x)
+  derived->bar(5);       // Calls Derived::bar(int x)
   derived->bar("Hello"); // Calls Derived::bar(const string& str)
 
   printf("4 --------------------\r\n");
-  delete ptr; // Don't forget to delete the pointer to prevent memory leak
+
+  Base *b = new FinalDerived();
+  b->foo(); // Calls FinalDerived::foo() because of dynamic dispatch
+
+  delete ptr, b; // Don't forget to delete the pointer to prevent memory leak
   return 0;
 }
