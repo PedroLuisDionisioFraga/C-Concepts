@@ -28,6 +28,6 @@ int main()
   std::cout << "Size of the array_heap_alloc, size of pointer: " << sizeof(array_heap_alloc) << " bytes" << std::endl;
   std::cout << "Value of `array_heap_alloc`: " << *array_heap_alloc << std::endl;
 
-  delete array_heap_alloc;
+  delete[] array_heap_alloc;
   return 0;
 }
