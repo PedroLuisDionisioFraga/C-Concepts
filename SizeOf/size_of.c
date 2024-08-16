@@ -1,5 +1,6 @@
 /**
  * The `sizeof` function returns the size of the variable or type in bytes, and this size is of type `size_t`
+ * @note It's a compile-time operator, not a function.
  *
  * The %zu format specifier is used in the printf function to print values of type size_t.
  *
