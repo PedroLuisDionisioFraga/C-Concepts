@@ -45,6 +45,7 @@
  * @{
  */
 #include <string.h>
+#include <stdint.h>
 
 #include "list.h"
 /*---------------------------------------------------------------------------*/
@@ -166,6 +167,21 @@ void list_remove(list_t list, const void *item)
     }
     r = l;
   }
+}
+/*---------------------------------------------------------------------------*/
+void *list_find(const_list_t list, bool (*condition)(const void *))
+{
+  struct list *l;
+
+  for (l = *list; l != NULL; l = l->next)
+  {
+    if(condition(l))
+    {
+      return l;
+    }
+  }
+
+  return NULL;
 }
 /*---------------------------------------------------------------------------*/
 int list_length(const_list_t list)

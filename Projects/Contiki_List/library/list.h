@@ -236,6 +236,15 @@ void   list_add(list_t list, void *item);
 void   list_remove(list_t list, const void *item);
 
 /**
+ * Find an element in the list based on a condition.
+ *
+ * \param list The list to search.
+ * \param condition A function pointer that returns true if the element matches the condition.
+ * \return A pointer to the found element, or NULL if not found.
+ */
+void *list_find(const_list_t list, bool (*condition)(const void *));
+
+/**
  * Get the length of a list.
  *
  * This function counts the number of elements on a specified list.

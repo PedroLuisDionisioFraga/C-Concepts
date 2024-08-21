@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 
 #include "list.h"
 
@@ -15,6 +16,11 @@ typedef struct
   struct name_t *next;
   char *name;
 } name_t;
+
+bool name_condition(const void *name)
+{
+  return (strcmp(((name_t *)name)->name, "Bob") == 0);
+}
 
 int main()
 {
@@ -43,6 +49,9 @@ int main()
   // Tail
   name_t *tail = (name_t *)list_tail(names);
   printf("tail->name: %s\n", tail->name);
+  // Find
+  name_t *find = (name_t *)list_find(names, &name_condition);
+  printf("The name `Bob` was found? %s\n", find != NULL ? "Yes" : "No");
 
   /* ------------------------------------------------ */
   // Iterate over the list
