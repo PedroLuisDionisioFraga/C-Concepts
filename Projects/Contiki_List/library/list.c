@@ -224,4 +224,13 @@ bool list_contains(const_list_t list, const void *item)
   return false;
 }
 /*---------------------------------------------------------------------------*/
+void list_print(const_list_t list, void (*print)(const void *))
+{
+  struct list *l;
+  for (l = *list; l != NULL; l = l->next)
+  {
+    print(l);
+  }
+}
+/*---------------------------------------------------------------------------*/
 /** @} */

@@ -320,6 +320,14 @@ list_item_next(const void *item)
  */
 bool list_contains(const_list_t list, const void *item);
 
+/**
+ * Print all elements in the list.
+ *
+ * \param list The list to print.
+ * \param print A function pointer that prints an element.
+ */
+void list_print(const_list_t list, void (*print)(const void *));
+
 #endif /* LIST_H_ */
 
 /** @} */
