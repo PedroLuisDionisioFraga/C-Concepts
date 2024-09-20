@@ -6,3 +6,6 @@
 
 # Tests Folder
 Tests/
+
+# CMake folders
+**/build/
