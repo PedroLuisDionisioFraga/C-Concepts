@@ -4,16 +4,16 @@
 
 #include "list.h"
 
-typedef struct
+typedef struct coordinate
 {
   int x;
   int y;
-  struct coordinate_t *next;
+  struct coordinate *next;
 } coordinate_t;
 
-typedef struct
+typedef struct name
 {
-  struct name_t *next;
+  struct name *next;
   char *name;
   char *surname;
 } name_t;
